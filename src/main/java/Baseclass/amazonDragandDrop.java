@@ -20,7 +20,7 @@ public static void draganddrop() throws Exception{
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	
-	Actions act = new Actions(driver);
+	Actions act = new Actions();
 	
 	WebElement deals = driver.findElement(By.xpath("//div[@class=\"ui-panel ui-widget ui-widget-content ui-corner-all\"]"));
 	
