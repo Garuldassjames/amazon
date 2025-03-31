@@ -15,12 +15,13 @@ public class amazonDragandDrop {
 	// TODO Auto-generated constructor stub
 public static void draganddrop() throws Exception{
 	WebDriverManager.chromedriver().clearDriverCache().setup();
-	WebDriver driver = new FirefocDriver();
+	WebDriver driver = new ChromeDriver();
 	driver.get("https://www.leafground.com/drag.xhtml;jsessionid=node01wnc9bcgf1xge1dvr2epkxsf5n72050.node0");
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	
 	Actions act = new Robot();
+	Actions act = new Actions(driver);
 	
 	WebElement deals = driver.findElement(By.xpath("//div[@class=\"ui-panel ui-widget ui-widget-content ui-corner-all\"]"));
 	
